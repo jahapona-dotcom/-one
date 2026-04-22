@@ -2,8 +2,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #0f172a; /* dark navy */
-    color: #e2e8f0; /* light text */
+    background-color: #0f172a;
+    color: #e2e8f0;
 }
 
 /* HEADER */
@@ -11,7 +11,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #020617; /* deep dark */
+    background-color: #020617;
     padding: 10px 20px;
     flex-wrap: wrap;
     border-bottom: 1px solid #1e293b;
@@ -22,13 +22,10 @@ h1 {
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
-
-    /* tech gradient */
     background: linear-gradient(90deg, #38bdf8, #6366f1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    margin-top: 30px;
+    margin: 10px 0;
     transition: transform 0.3s ease, letter-spacing 0.3s ease;
 }
 
@@ -41,7 +38,6 @@ h1:hover {
 nav ul {
     list-style-type: none;
     display: flex;
-    flex-direction: row;
     gap: 20px;
     padding: 0;
     margin: 0;
@@ -50,15 +46,15 @@ nav ul {
 nav ul li a {
     display: inline-block;
     text-decoration: none;
-    color: #38bdf8; /* neon blue */
+    color: #38bdf8;
     padding: 0.5rem 1rem;
     border-radius: 20px;
-    background-color: #1e293b; /* dark button */
+    background-color: #1e293b;
     transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #2563eb; /* blue */
+    background-color: #2563eb;
     color: white;
     transform: scale(1.1);
     box-shadow: 0 0 10px #38bdf8;
@@ -86,4 +82,75 @@ p {
     border-radius: 10px;
     padding: 1.2rem 2rem;
     border: 1px solid #334155;
+}
+
+/* ========================= */
+/* 📱 MOBILE (<=600px) */
+/* ========================= */
+@media (max-width: 600px) {
+    .one {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        width: 80%;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1rem;
+        padding: 1rem;
+        max-width: 90%;
+    }
+}
+
+/* ========================= */
+/* 📱 TABLET (601px - 992px) */
+/* ========================= */
+@media (max-width: 992px) {
+    .one {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    p {
+        max-width: 85%;
+    }
+}
+
+/* ========================= */
+/* 💻 DESKTOP (>=993px) */
+/* ========================= */
+@media (min-width: 993px) {
+    .one {
+        flex-direction: row;
+    }
+
+    nav ul {
+        justify-content: flex-end;
+    }
 }
